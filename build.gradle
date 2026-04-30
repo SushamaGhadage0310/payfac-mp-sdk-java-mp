@@ -179,7 +179,7 @@ publishing {
             pom {
                 name = 'mp-sdk-for-java'
                 description = 'Vantiv eCommerce Java SDK is a Java implementation of the Vantiv Payfac XML API'
-                url = 'https://github.com/Vantiv/payfac-mp-sdk-java'
+                url = 'https://github.com/Worldpay/payfac-mp-sdk-java'
                 groupId = 'io.github.vantiv'
                 artifactId = "${JAR_NAME}"
                 version = "${JAR_VERSION}"
@@ -187,7 +187,7 @@ publishing {
                 licenses {
                     license {
                         name = 'License'
-                        url = 'https://github.com/Vantiv/payfac-mp-sdk-java/blob/14.x/LICENSE'
+                        url = 'https://github.com/Worldpay/payfac-mp-sdk-java/blob/14.x/LICENSE'
                     }
                 }
                 developers{
@@ -198,9 +198,9 @@ publishing {
                     }
                 }
                 scm {
-                    connection = 'scm:git:github.com/Vantiv/payfac-mp-sdk-for-java.git'
-                    developerConnection = 'scm:git:ssh://github.com/Vantiv/payfac-mp-sdk-for-java.git'
-                    url = 'https://github.com/Vantiv/payfac-mp-sdk-java.git'
+                    connection = 'scm:git:github.com/Worldpay/payfac-mp-sdk-for-java.git'
+                    developerConnection = 'scm:git:ssh://github.com/Worldpay/payfac-mp-sdk-for-java.git'
+                    url = 'https://github.com/Worldpay/payfac-mp-sdk-java.git'
                 }
             }
         }
