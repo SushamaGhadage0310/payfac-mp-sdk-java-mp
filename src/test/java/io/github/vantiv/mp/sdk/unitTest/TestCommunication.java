@@ -161,6 +161,7 @@ public class TestCommunication {
                 "\t<stakePercent>33</stakePercent>\n" +
                 "</principal>\n" +
                 "<yearsInBusiness>12</yearsInBusiness>\n" +
+                "     <merchantCategoryCode>5964</merchantCategoryCode>\n" +
                 "</legalEntityCreateRequest>";
         String response = communication.httpPostRequest(xmlRequest,"https://www.testvantivcnp.com/sandbox/payfac/legalentity");
         LegalEntityCreateResponse legalEntityCreateResponse = XMLConverters.generateCreateResponse(response);

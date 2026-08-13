@@ -106,6 +106,7 @@ public class TestPayFacLegalEntity {
         createRequest.setHasAcceptedCreditCards(true);
         createRequest.setAddress(address);
         createRequest.setPrincipal(principal);
+        createRequest.setMerchantCategoryCode("5423");
 
         updateRequest = new LegalEntityUpdateRequest();
         updateRequest.setAddress(addressUpdatable);

@@ -102,6 +102,7 @@ public class TestPayFacLegalEntity {
         createRequest.setAddress(address);
         createRequest.setPrincipal(principal);
         createRequest.setYearsInBusiness("12");
+        createRequest.setMerchantCategoryCode("5964");
 
         updateRequest = new LegalEntityUpdateRequest();
         updateRequest.setAddress(addressUpdatable);
@@ -132,6 +133,7 @@ public class TestPayFacLegalEntity {
                 "        <postalCode>03064</postalCode>" +
                 "        <countryCode>USA</countryCode>" +
                 "    </address>" +
+                "     <merchantCategoryCode>5964</merchantCategoryCode>\n" +
                 "    <principal>" +
                 "        <principalId>1</principalId>" +
                 "        <title>CEO</title>" +
@@ -301,7 +303,8 @@ public class TestPayFacLegalEntity {
                 "<stakePercent>33</stakePercent>" +
                 "</principal>" +
                 "<yearsInBusiness>12</yearsInBusiness>" +
-                "<sdkVersion>15.0.0</sdkVersion>" +
+                "<merchantCategoryCode>5964</merchantCategoryCode>" +
+                "<sdkVersion>16.0.0</sdkVersion>" +
                 "<language>java</language>" +
                 "</legalEntityCreateRequest>";
         String mockedResponse = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>" +
