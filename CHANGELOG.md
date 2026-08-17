@@ -1,10 +1,7 @@
 CHANGELOG
 ---------
 ## 16.0.0
-* **Feature** Merchant Category Code No Longer Optional on 'LegalEntityCreate' Request
-* **Feature** New complex element 'valueAddedServices' is added in 'subMerchantCreateRequest','subMerchantUpdateRequest'
-* **Feature** New element 'valueAddedServices' is of type 'valueAddedServices' which contains 'code' of type 'valueAddedServiceProductCode' and 'enabled' is of type 'boolean'
-* **Feature** To support element 'code' new Enum is added 'valueAddedServiceProductCode' with value 'DISPUTE_DEFENDER'
+* **Feature** Merchant Category Code No Longer Optional on Legal Entity Create Request
 
 ## 15.0.1
 * **Feature** Support for Merchant Category Code - Payfac MP API version 15.0.1
