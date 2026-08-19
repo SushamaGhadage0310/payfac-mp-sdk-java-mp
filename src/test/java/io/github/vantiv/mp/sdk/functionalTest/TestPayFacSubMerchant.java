@@ -35,6 +35,8 @@ public class TestPayFacSubMerchant {
     AddressUpdatable address;
     SubMerchantPrimaryContactUpdatable primaryContactUpdatable;
     SubMerchantECheckFeature eCheckFeature;
+    ValueAddedServices.Service service;
+    ValueAddedServices valueAddedServices;
 
     @Before
     public void setUp(){
@@ -69,6 +71,12 @@ public class TestPayFacSubMerchant {
         product.setActive(true);
         complianceProducts.getProducts().add(product);
 
+        service = new ValueAddedServices.Service();
+        valueAddedServices= new ValueAddedServices();
+        service.setCode(ValueAddedServiceProductCode.DISPUTE_DEFENDER);
+        service.setEnabled(true);
+        valueAddedServices.getServices().add(service);
+
         request.setMerchantName(name);
         request.setUrl(url);
         request.setCustomerServiceNumber(customerServiceNumber);
@@ -83,6 +91,7 @@ public class TestPayFacSubMerchant {
         request.setCountryOfOrigin("CAN");
         request.setRevenueBoost(revenueBoostFeature);
         request.setComplianceProducts(complianceProducts);
+        request.setValueAddedServices(valueAddedServices);
 
         address = new AddressUpdatable();
         address.setStreetAddress1("Street Address 1");
@@ -125,6 +134,7 @@ public class TestPayFacSubMerchant {
         updateRequest.setCountryOfOrigin("CAN");
         updateRequest.setRevenueBoost(revenueBoostFeature);
         updateRequest.setComplianceProducts(complianceProducts);
+        updateRequest.setValueAddedServices(valueAddedServices);
 
     }
 

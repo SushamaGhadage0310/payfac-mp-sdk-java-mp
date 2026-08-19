@@ -1,5 +1,8 @@
 CHANGELOG
 ---------
+## 16.0.0
+* **Feature** Merchant Category Code No Longer Optional on Legal Entity Create Request
+
 ## 15.0.1
 * **Feature** Support for Merchant Category Code - Payfac MP API version 15.0.1
 
