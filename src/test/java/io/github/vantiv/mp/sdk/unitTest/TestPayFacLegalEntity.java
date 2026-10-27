@@ -7,24 +7,10 @@ import static org.mockito.Mockito.when;
 import java.util.Calendar;
 import java.util.Date;
 
+import io.github.vantiv.mp.sdk.*;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
-
-import io.github.vantiv.mp.sdk.Address;
-import io.github.vantiv.mp.sdk.AddressUpdatable;
-import io.github.vantiv.mp.sdk.Communication;
-import io.github.vantiv.mp.sdk.LegalEntityCreateRequest;
-import io.github.vantiv.mp.sdk.LegalEntityCreateResponse;
-import io.github.vantiv.mp.sdk.LegalEntityOwnershipType;
-import io.github.vantiv.mp.sdk.LegalEntityPrincipal;
-import io.github.vantiv.mp.sdk.LegalEntityPrincipalUpdatable;
-import io.github.vantiv.mp.sdk.LegalEntityResponse;
-import io.github.vantiv.mp.sdk.LegalEntityRetrievalResponse;
-import io.github.vantiv.mp.sdk.LegalEntityType;
-import io.github.vantiv.mp.sdk.LegalEntityUpdateRequest;
-import io.github.vantiv.mp.sdk.PayFacLegalEntity;
-import io.github.vantiv.mp.sdk.PrincipalAddress;
 
 public class TestPayFacLegalEntity {
     PayFacLegalEntity payFacLegalEntity;
@@ -300,7 +286,7 @@ public class TestPayFacLegalEntity {
                 "<stakePercent>33</stakePercent>" +
                 "</principal>" +
                 "<yearsInBusiness>12</yearsInBusiness>" +
-                "<sdkVersion>13.1.0</sdkVersion>" +
+                "<sdkVersion>13.1.2</sdkVersion>" +
                 "<language>java</language>" +
                 "</legalEntityCreateRequest>";
         String mockedResponse = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>" +
@@ -424,7 +410,7 @@ public class TestPayFacLegalEntity {
 
     @Test
     public void testPutByLegalEntity(){
-        String expectedRequestUrl = "https://www.testvantivcnp.com/sandbox/payfac/legalentity/1000293";
+        String expectedRequestUrl = "https://nufl2rdd00406.vapdev.int:8888/payfac/legalentity/1000293";
         String expectedRequest = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>" +
                 "<legalEntityUpdateRequest " +
                 "xmlns=\"http://payfac.vantivcnp.com/api/merchant/onboard\">" +
@@ -454,6 +440,7 @@ public class TestPayFacLegalEntity {
                 "<countryCode>USA</countryCode>" +
                 "</address>" +
                 "</principal>" +
+                //"<taxIdType>EIN</taxIdType>" +
                 "</legalEntityUpdateRequest>";
         String mockedResponse = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>" +
                 "<legalEntityResponse xmlns=\"http://payfac.vantivcnp.com/api/merchant/onboard\">" +
