@@ -1,6 +1,8 @@
 package io.github.vantiv.mp.sdk.unitTest;
 
 import static org.junit.Assert.assertNotNull;
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.ArgumentMatchers.matches;
 import static org.mockito.Mockito.when;
 
@@ -87,6 +89,7 @@ public class TestPayFacLegalEntity {
         createRequest.setAddress(address);
         createRequest.setPrincipal(principal);
         createRequest.setYearsInBusiness("12");
+        createRequest.setTaxIdType(TaxIdTypeCode.EIN);
 
         updateRequest = new LegalEntityUpdateRequest();
         updateRequest.setAddress(addressUpdatable);
@@ -95,6 +98,7 @@ public class TestPayFacLegalEntity {
         updateRequest.setAnnualCreditCardSalesVolume(100000000l);
         updateRequest.setHasAcceptedCreditCards(true);
         updateRequest.setPrincipal(legalEntityPrincipalUpdatable);
+        updateRequest.setTaxIdType(TaxIdTypeCode.EIN);
     }
 
     @Test
@@ -410,10 +414,9 @@ public class TestPayFacLegalEntity {
 
     @Test
     public void testPutByLegalEntity(){
-        String expectedRequestUrl = "https://nufl2rdd00406.vapdev.int:8888/payfac/legalentity/1000293";
+        String expectedRequestUrl = "https://www.testvantivcnp.com/sandbox/payfac/legalentity/1000293";
         String expectedRequest = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>" +
-                "<legalEntityUpdateRequest " +
-                "xmlns=\"http://payfac.vantivcnp.com/api/merchant/onboard\">" +
+                "<legalEntityUpdateRequest xmlns=\"http://payfac.vantivcnp.com/api/merchant/onboard\">" +
                 "<address>" +
                 "<streetAddress1>Street Address 1</streetAddress1>" +
                 "<streetAddress2>Street Address 2</streetAddress2>" +
@@ -440,7 +443,7 @@ public class TestPayFacLegalEntity {
                 "<countryCode>USA</countryCode>" +
                 "</address>" +
                 "</principal>" +
-                //"<taxIdType>EIN</taxIdType>" +
+                "<taxIdType>EIN</taxIdType>" +
                 "</legalEntityUpdateRequest>";
         String mockedResponse = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>" +
                 "<legalEntityResponse xmlns=\"http://payfac.vantivcnp.com/api/merchant/onboard\">" +

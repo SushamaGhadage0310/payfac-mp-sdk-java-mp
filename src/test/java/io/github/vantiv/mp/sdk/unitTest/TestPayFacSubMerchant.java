@@ -356,6 +356,12 @@ public class TestPayFacSubMerchant {
                 "<eCheck>" +
                 "<eCheckBillingDescriptor>9785552222</eCheckBillingDescriptor>" +
                 "</eCheck>" +
+                "<valueAddedServices>" +
+                "<service>" +
+                "<code>DISPUTE_DEFENDER</code>" +
+                "<enabled>true</enabled>" +
+                "</service><" +
+                "/valueAddedServices>" +
                 "</subMerchantUpdateRequest>";
         String mockedResponse = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>" +
                 "<response xmlns=\"http://payfac.vantivcnp.com/api/merchant/onboard\">" +
